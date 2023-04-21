@@ -44,7 +44,7 @@ btn.forEach((button) =>{button.addEventListener('click',()=>{
 
     //display results
     console.log(`Cruise ; ${playerWins}: computer ; ${computerWins}`);
-    document.querySelector(".computerChoice").innerHTML = `${player} Choice : ${compAns}`
+    document.querySelector(".computerChoice").innerHTML = `${player}'s Choice : ${compAns}`
     document.querySelector(".playersChoice").innerHTML = `Player's Choice : ${button.value}`
 
     document.querySelector(".compScore").innerHTML = `Computer<br> <p>${computerWins}</p> `
