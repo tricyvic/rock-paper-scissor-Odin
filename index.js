@@ -1,9 +1,15 @@
 //console.log("hi there");
+const player = prompt("Please input your name")
 const btn = document.querySelectorAll('.choose');
 const gameChar = ["rock","paper","scissors"];
 let playerWins = 0;
 let computerWins = 0;
 const winMessage = "";
+const display = document.querySelector(".display-winner");
+
+document.querySelector(".computerChoice").innerHTML = `${player}'s Choice : _ `
+document.querySelector(".greetings").innerHTML = `Welcome ${player}`
+
 
 
 //computer chooses between the gameChoises
@@ -17,32 +23,45 @@ function getComputerChoise(){
 
 btn.forEach((button) =>{button.addEventListener('click',()=>{
         let ans = []
-    ans.push(getComputerChoise(),button.value);
+        let compAns = getComputerChoise()
+    ans.push(compAns,button.value);
 
     if(ans[0] == ans[1]){
-        console.log("draw");
+        display.innerHTML = "Its a draw";
     }else if(ans[0]==="rock"&& ans[1]==="paper" ||ans[0]==="paper" && ans[1]==="scissors" || ans[0] === "scissors"&& ans[1]==="rock"){
-        console.log("you won");
         
+        playerWins += 1;
+        display.innerHTML = `${player} won this round` ;
+
+
     }else{
-        console.log("you lost");
+        
+        computerWins += 1;
+        display.innerHTML = "you lost this round";
     }
   
     
 
     //display results
     console.log(`Cruise ; ${playerWins}: computer ; ${computerWins}`);
+    document.querySelector(".computerChoice").innerHTML = `${player} Choice : ${compAns}`
+    document.querySelector(".playersChoice").innerHTML = `Player's Choice : ${button.value}`
+
+    document.querySelector(".compScore").innerHTML = `Computer<br> <p>${computerWins}</p> `
+    document.querySelector(".playerScore").innerHTML = `Player<br> <p>${playerWins}</p>`
 
     //display winner
 
     if(playerWins===5){
-        console.log("player Wins");
+       display.innerHTML="player Wins";
         playerWins=0;
         computerWins=0;
     }else if(computerWins === 5){
-        console.log("computerWins");
+       display.innerHTML="computerWins";
         playerWins=0;
         computerWins=0;
+    }if (playerWins==0) {
+        return;
     }
     
 })})

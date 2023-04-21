@@ -40,6 +40,10 @@ nav a{
     gap: 1pc;
     color: #FFF;
 }
+.score{
+    display: flex;
+    gap: 12px;
+}
 .chooseAns{
     display: flex;
     flex-direction: column;
