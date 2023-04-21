@@ -1,0 +1,67 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(to bottom left, red , blue);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+nav ul{
+    display: flex;
+    gap: 5pc;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 3pc;
+    height: 3pc;
+}
+.content{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1pc;
+    color: #FFF;
+}
+.score{
+    display: flex;
+    gap: 12px;
+}
+.chooseAns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+input{
+    background-image: linear-gradient(to bottom right,rgb(0, 179, 255),rgb(0, 255, 81));
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+}
+.who-wins{
+    color: black;
+    border-radius: 15px;
+    padding: 12px;
+    height: auto;
+    background-color: #FFF ;
+}

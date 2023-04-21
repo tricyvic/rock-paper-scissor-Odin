@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>RockPaperScissors</title>
 </head>
 <body>
+    <nav>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="logo">
+            <p>RockPaperScissors</p>
+        </a>
+        <ul>
+            <li><a href="#">Play game</a></li>
+            <li><a href="howTo.html">How to play</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2 class="greetings">Welcome Player1</h2>
+        <div class="chooseAns">
+            <h5>Choose between the choices below :</h5>
+            <input type="button" class="choose" value="rock" >
+            <input type="button" class="choose" value="paper">
+            <input type="button" class="choose" value="scissors">
+        </div>
+        <div class="display">
+            <div class="computerChoice">Computer's Choice : _ </div>
+            <div class="playersChoice">Player's Choice : _ </div>
+        </div>
+        <div class="who-wins">
+            <p class="display-winner">Lets see who wins ! &#128512;</p>
+        </div>
+        <div class="score">
+            <div class="compScore">Computer<br> <p>0</p> </div>
+            <p>:</p>
+            <div class="playerScore">Player<br> <p>0</p>  </div>
+        </div>
+
+    </div>
  
     <script src="./index.js"></script>
 </body>
