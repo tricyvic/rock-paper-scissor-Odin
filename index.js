@@ -18,10 +18,17 @@ function getComputerChoise(){
 btn.forEach((button) =>{button.addEventListener('click',()=>{
         let ans = []
     ans.push(getComputerChoise(),button.value);
+
     if(ans[0] == ans[1]){
-        winMessage = "It's a draw!"
-        computerWins += 1;
+        console.log("draw");
+    }else if(ans[0]==="rock"&& ans[1]==="paper" ||ans[0]==="paper" && ans[1]==="scissors" || ans[0] === "scissors"&& ans[1]==="rock"){
+        console.log("you won");
+        
+    }else{
+        console.log("you lost");
     }
+  
+    
 
     //display results
     console.log(`Cruise ; ${playerWins}: computer ; ${computerWins}`);
@@ -39,6 +46,17 @@ btn.forEach((button) =>{button.addEventListener('click',()=>{
     }
     
 })})
+
+
+// if(ans[0] == ans[1]){
+//     computerWins += 1;
+//     console.log("it a draw");
+//     // document.querySelector(".display-winner").innerHTML = "hi"
+// }else if(ans[0]==="rock"&& ans[1]==="paper" ||ans[0]==="paper" && ans[1]==="scissors" || ans[0] === "scissors"&& ans[1]==="rock"){
+//     winMessage = "***You won!!!***";
+// }else {
+//     winMessage = "You lost!"
+// }
 
 
 
