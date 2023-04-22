@@ -13,8 +13,7 @@ nav{
     align-items: center;
     background-color: aqua;
     margin: 0;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 20px;
 }
 nav ul{
     display: flex;
