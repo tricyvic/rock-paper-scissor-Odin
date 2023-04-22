@@ -10,7 +10,12 @@ const display = document.querySelector(".display-winner");
 document.querySelector(".computerChoice").innerHTML = `${player}'s Choice : _ `
 document.querySelector(".greetings").innerHTML = `Welcome ${player}`
 
-
+//reset game
+const reset = (name) =>{
+    playerWins=0;
+    computerWins=0;
+    alert(`${name} wins...Play again?`)
+}
 
 //computer chooses between the gameChoises
 function getComputerChoise(){
@@ -54,12 +59,10 @@ btn.forEach((button) =>{button.addEventListener('click',()=>{
 
     if(playerWins===5){
        display.innerHTML="player Wins";
-        playerWins=0;
-        computerWins=0;
+        reset(`${player}`)
     }else if(computerWins === 5){
-       display.innerHTML="computerWins";
-        playerWins=0;
-        computerWins=0;
+       display.innerHTML="computer Wins";
+        reset("computer")
     }if (playerWins==0) {
         return;
     }
